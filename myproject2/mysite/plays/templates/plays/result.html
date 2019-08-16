@@ -1,0 +1,15 @@
+<h1>{{player.name}} against {{ enemy.name }}</h1>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<p>你的血量:{{player.hp}}，敵方血量:{{enemy.hp}}</p>
+{% for xy in hp %}
+<p>The enemy have {{xy.0|safe}} hp left.<br>You have {{xy.1}} hp left</p>
+
+
+{% endfor %}
+<p>The battle ends in {{round}} round{{round|pluralize}}</p>
+
+
+
+
+

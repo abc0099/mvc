@@ -1,0 +1,9 @@
+{% if get_field %}
+    <ul>
+    {% for field in get_field %}
+             <li><a href="{% url 'result' field.id %}">{{field.name}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No enemys are available.</p>
+{% endif %}
